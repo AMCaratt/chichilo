@@ -1,0 +1,380 @@
+:root {
+    --primary-red: #A30000; /* Un rojo intenso */
+    --secondary-green: #008000; /* Un verde oscuro */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #fdfdfd;
+    --bg-dark: #2c3e50; /* Un color oscuro para contraste en el footer */
+    --accent-gold: #FFD700; /* Un toque de oro para destacar */
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente más moderna y legible */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante para títulos */
+    color: var(--primary-red);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-green);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Para eliminar espacio extra debajo de las imágenes */
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-title {
+    font-size: 3em;
+    color: var(--text-light);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.site-slogan {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.contact-info {
+    font-style: normal;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.main-nav {
+    background-color: var(--secondary-green);
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para alinear ítems de navegación */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan en pantallas pequeñas */
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: var(--text-light);
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+/* --- Main Content Sections --- */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: var(--secondary-green);
+    border-bottom: 3px solid var(--primary-red);
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+.menu-section {
+    padding: 20px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    color: var(--primary-red);
+    font-size: 1.8em;
+    margin-top: 0;
+    text-align: left;
+}
+
+.menu-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.menu-item li::before {
+    content: '🍝'; /* Ícono visual para platos */
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+}
+
+.menu-item:nth-child(2) li::before {
+    content: '🍮'; /* Ícono visual para postres */
+}
+
+.menu-item .menu-image {
+    max-width: 150px; /* Ajusta el tamaño de las imágenes del menú */
+    height: auto;
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 2px solid var(--secondary-green);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.hours-section p {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.gallery-section {
+    padding: 20px 0;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Galería de imágenes responsiva */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.image-gallery img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su celda */
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para que se ajuste */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03); /* Efecto de zoom al pasar el mouse */
+}
+
+.history-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.history-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.history-section .highlight {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed var(--accent-gold);
+    border-radius: 5px;
+}
+
+.contact-info-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-info-section address {
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.contact-info-section .tagline {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--primary-red);
+    margin-top: 20px;
+}
+
+.contact-info-section .year-established {
+    font-size: 1.5em;
+    color: var(--secondary-green);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.main-footer a {
+    color: var(--accent-gold);
+    text-decoration: underline;
+}
+
+.main-footer a:hover {
+    color: var(--text-light);
+}
+
+/* --- Responsive Design (Media Queries) --- */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2.2em;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apila los ítems de navegación en pantallas pequeñas */
+    }
+
+    .main-nav li {
+        margin: 5px 0;
+    }
+
+    .menu-item h3 {
+        text-align: center;
+    }
+
+    .menu-item ul {
+        text-align: left; /* Alinea los ítems de la lista a la izquierda */
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.8em;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .menu-grid, .image-gallery {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
+    }
+}
+
+/* Eliminar estilos originales */
+.auto-style1, .auto-style3, .auto-style4, .auto-style5, .auto-style6, .auto-style7, .auto-style8,
+.auto-style9, .auto-style10, .auto-style11, .auto-style12, .auto-style13, .auto-style14,
+.auto-style18, .auto-style20, .auto-style21, .auto-style24, .auto-style25, .auto-style26,
+.auto-style27, .auto-style28, .auto-style29, .auto-style30, .auto-style31, .auto-style32,
+body[text="#000000"], body[link="#FF0000"], body[vlink="#008080"], body[alink="#FFFF00"],
+body[bgcolor="#ffffff"] {
+    /* Estas clases son de tu HTML original y están sobrescribiendo estilos.
+       Idealmente, no deberías tener estilos en línea o tan específicos en tu HTML.
+       Al usar un CSS externo y selectores de clase bien definidos, estos se vuelven innecesarios.
+       Si ves algún comportamiento extraño, podrías necesitar revisar y eliminar explícitamente
+       estilos in-line o selectores específicos de tu HTML si aún los tienes.
+       Por ahora, los ignoramos ya que nuestro CSS nuevo es más específico y moderno.
+    */
+    display: initial !important; /* Resetea posibles 'display: none' si el original los tenía */
+    color: initial !important;
+    font-size: initial !important;
+    font-family: initial !important;
+    text-decoration: initial !important;
+    /* ... y así sucesivamente para todas las propiedades que puedan interferir */
+}
+
+/* Limpieza de elementos HTML antiguos y no semánticos */
+blink, marquee, font {
+    display: block; /* O display: none; si no quieres que aparezcan */
+    /* Estos elementos son obsoletos y se deben reemplazar con CSS para animación o movimiento de texto */
+}
+
+/* Ajustes específicos para el contenido original con elementos obsoletos */
+/* Esto es para intentar limpiar la apariencia si persisten elementos obsoletos */
+marquee {
+    background-color: transparent !important; /* Elimina el fondo si el original lo puso */
+    color: var(--text-dark) !important;
+    font-size: 1.2em !important;
+    font-family: 'Roboto', sans-serif !important;
+    text-decoration: none !important;
+    padding: 5px 0;
+    text-align: center;
+}
+
+/* El contenido dentro de la etiqueta <th> en tu HTML original necesita ser reorganizado */
+/* Actualmente, gran parte del contenido de la página está dentro de un <th> */
+/* Lo mejor es mover ese contenido a <section> o <div> en el <body> directamente */
+/* Los estilos de tabla que usas para el layout (border="0", etc.) deben ser reemplazados por Flexbox/Grid */
+
+/* Los webbots y contadores de visitas son elementos externos, no los estilizo */
+#sfcp7ydgbyrh8m6r5hl62eef5qjhsw38y88 {
+    margin-top: 30px;
+    text-align: center;
+
+}
